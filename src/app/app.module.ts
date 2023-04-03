@@ -6,19 +6,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ConversorComponent } from './conversor/conversor.component';
 import { InputComponent } from './input/input.component';
 import { SelectComponent } from './select/select.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConversorComponent,
     InputComponent,
-    SelectComponent
+    SelectComponent,
   ],
-  imports: [
-    BrowserModule,
-    NgbModule
-  ],
+  imports: [BrowserModule, NgbModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

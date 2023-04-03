@@ -1,6 +1,11 @@
 <input
   type="text"
   class="form-control-lg me-3"
-  placeholder="First name"
-  aria-label="First name"
+  placeholder="{{
+    select === 'cm' ? 'Centímetro' : select === 'm' ? 'Metros' : 'Kilometros'
+  }}"
+  [(ngModel)]="value"
+  (change)="onChange()"
+  value="{{ value }}"
+  [readonly]="readOnly"
 />

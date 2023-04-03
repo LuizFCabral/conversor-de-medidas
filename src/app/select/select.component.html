@@ -1,4 +1,4 @@
-<select class="form-select-lg">
+<select class="form-select-lg" [(ngModel)]="value" (change)="onChange()">
   <option value="cm" selected>Centímetros(cm)</option>
   <option value="m">Metros(m)</option>
   <option value="km">Kilometros(km)</option>

@@ -1,18 +1,27 @@
 <div class="d-flex justify-content-center text-center">
-  <div class="card" style="width: 37.5rem">
+  <div class="card mt-5" style="width: 37.5rem">
     <div class="card-body">
-      <h3 class="card-title">Conversor de medidas</h3>
-
+      <h2 class="card-title">Conversor de medidas</h2>
       <div class="mt-5 container">
-        <div class="input-group">
-          <app-input></app-input>
-          <app-select></app-select>
+        <div class="input-group justify-content-center">
+          <app-input
+            (sendValue)="getN1($event)"
+            [select]="selectN1"
+            [value]="n1"
+            [readOnly]="false"
+          ></app-input>
+          <app-select (sendValue)="getOpt1($event)"></app-select>
         </div>
       </div>
       <div class="mt-4 container">
-        <div class="input-group">
-          <app-input></app-input>
-          <app-select></app-select>
+        <div class="input-group justify-content-center">
+          <app-input
+            (sendValue)="getN2($event)"
+            [select]="selectN2"
+            [value]="n2"
+            [readOnly]="true"
+          ></app-input>
+          <app-select (sendValue)="getOpt2($event)"></app-select>
         </div>
       </div>
     </div>
